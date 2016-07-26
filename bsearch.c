@@ -25,7 +25,11 @@ int main(void) {
   int array[] = {1,1,3,5,6,7,7};
   for (int i = 0; i < 10; i++) {
     int index = my_bsearch(array, 7, i);
-    printf("Index of the first item greater than %d is %d\n", i, index);
+    if (index != -1) {
+      printf("Index of the first item greater than %d is %d\n", i, index);
+    } else {
+      printf("There is no item greater than %d\n", i);
+    }
   }
   return 0;
 }
